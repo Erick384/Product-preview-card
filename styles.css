@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-size: 14px; */
+}
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    height: 350px;
+    width: 500px;
+    gap: none;
+    
+}
+.left{
+    background-image: url(./images/image-product-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px 0 0 10px ;
+} 
+/* .image{
+    width: 100%;
+    height: 100%;
+    
+} */
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    /* justify-content:space-between; */
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 1.5rem;
+    /* margin: 1.5rem; */
+    /* border: 1px solid red; */
+}
+.price{
+    display: flex;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-family: 'Fraunces', serif;
+}
+.price h1{
+    color: hsl(158, 36%, 37%);
+}
+.price span{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+}
+h1{
+    font-family: 'Fraunces', serif;
+
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+@media screen and (max-width:600px){
+    .container{
+        flex-direction: column;
+        height: 100vh;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .left , .right{
+        width: 100%;
+    }
+    .left{
+        background-image: url(./images/image-product-mobile.jpg);
+        border-radius: 10px 10px 0 0;
+    }
+    .right{
+        border-radius: 0 0 10px 10px;
+    }
+}
